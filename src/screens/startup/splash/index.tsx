@@ -5,12 +5,14 @@ import { Dimensions, ImageBackground } from 'react-native';
 import { Images } from '../../../common/assets';
 import { Screen } from '../../../common/components';
 import { NavigatorParamList } from '../../../common/navigation';
+import { consoleLog } from '../../../common/utils';
 import { styles } from './styles';
 
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 export const SplashScreen: FC<StackScreenProps<NavigatorParamList, 'splash'>> =
-  observer(({navigation}) => {
+  observer(({ navigation }) => {
     useEffect(() => {
+      consoleLog("Test")
       fetch();
     });
 
